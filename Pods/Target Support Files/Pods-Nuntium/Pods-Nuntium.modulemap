@@ -1,0 +1,6 @@
+framework module Pods_Nuntium {
+  umbrella header "Pods-Nuntium-umbrella.h"
+
+  export *
+  module * { export * }
+}

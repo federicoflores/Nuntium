@@ -1,0 +1,541 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		082837231FCC67DE00210D3F /* SelectionNewsPreferenceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082837221FCC67DE00210D3F /* SelectionNewsPreferenceTableViewController.swift */; };
+		082837251FCC681000210D3F /* ItemNewsPreferenceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082837241FCC681000210D3F /* ItemNewsPreferenceTableViewCell.swift */; };
+		9C0906F271BD31CF754837FD /* Pods_Nuntium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AFBCFC1FA87054B2B0CC2B7 /* Pods_Nuntium.framework */; };
+		CA2473501FD1071A0093F00E /* QueryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA24734F1FD1071A0093F00E /* QueryViewController.swift */; };
+		CA2B50591FD1F817008C67FF /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2B50581FD1F817008C67FF /* SettingsCell.swift */; };
+		CA3DDCD01FBAA45000DABD64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3DDCCF1FBAA45000DABD64 /* AppDelegate.swift */; };
+		CA3DDCD51FBAA45000DABD64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA3DDCD31FBAA45000DABD64 /* Main.storyboard */; };
+		CA3DDCD81FBAA45000DABD64 /* Nuntium.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CA3DDCD61FBAA45000DABD64 /* Nuntium.xcdatamodeld */; };
+		CA3DDCDA1FBAA45000DABD64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA3DDCD91FBAA45000DABD64 /* Assets.xcassets */; };
+		CA3DDCDD1FBAA45000DABD64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA3DDCDB1FBAA45000DABD64 /* LaunchScreen.storyboard */; };
+		CA3DDCE51FBAA4AA00DABD64 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3DDCE41FBAA4AA00DABD64 /* News.swift */; };
+		CA3DDCE71FBAA4DD00DABD64 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3DDCE61FBAA4DD00DABD64 /* Source.swift */; };
+		CA3DDCE91FBAA51800DABD64 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3DDCE81FBAA51800DABD64 /* MainTableViewController.swift */; };
+		CA3DDCEB1FBAA57900DABD64 /* NewsDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3DDCEA1FBAA57900DABD64 /* NewsDao.swift */; };
+		CA3DDCED1FBAA59A00DABD64 /* NewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3DDCEC1FBAA59A00DABD64 /* NewsService.swift */; };
+		CA3DDCF11FBAA6CE00DABD64 /* NewsWithImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3DDCF01FBAA6CE00DABD64 /* NewsWithImageTableViewCell.swift */; };
+		CA3DDCF31FBAA6E400DABD64 /* NotImageNewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3DDCF21FBAA6E400DABD64 /* NotImageNewsTableViewCell.swift */; };
+		CA3DDCF51FBAC09800DABD64 /* NewsWithImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3DDCF41FBAC09800DABD64 /* NewsWithImageViewController.swift */; };
+		CA3DDCFB1FBAC62B00DABD64 /* NotImageNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3DDCFA1FBAC62B00DABD64 /* NotImageNewsViewController.swift */; };
+		CA4BBB811FCDF281001A8DCE /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4BBB801FCDF281001A8DCE /* SettingsTableViewCell.swift */; };
+		CADBFB041FCDF46E0024BAA9 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADBFB031FCDF46E0024BAA9 /* SettingsTableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		082837221FCC67DE00210D3F /* SelectionNewsPreferenceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionNewsPreferenceTableViewController.swift; sourceTree = "<group>"; };
+		082837241FCC681000210D3F /* ItemNewsPreferenceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemNewsPreferenceTableViewCell.swift; sourceTree = "<group>"; };
+		8AFBCFC1FA87054B2B0CC2B7 /* Pods_Nuntium.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nuntium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A418837D8BE30B31A6AC47C9 /* Pods-Nuntium.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nuntium.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nuntium/Pods-Nuntium.release.xcconfig"; sourceTree = "<group>"; };
+		CA24734F1FD1071A0093F00E /* QueryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryViewController.swift; sourceTree = "<group>"; };
+		CA2B50581FD1F817008C67FF /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		CA3DDCCC1FBAA45000DABD64 /* Nuntium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nuntium.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA3DDCCF1FBAA45000DABD64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CA3DDCD41FBAA45000DABD64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CA3DDCD71FBAA45000DABD64 /* Nuntium.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Nuntium.xcdatamodel; sourceTree = "<group>"; };
+		CA3DDCD91FBAA45000DABD64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CA3DDCDC1FBAA45000DABD64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CA3DDCDE1FBAA45000DABD64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA3DDCE41FBAA4AA00DABD64 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		CA3DDCE61FBAA4DD00DABD64 /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
+		CA3DDCE81FBAA51800DABD64 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		CA3DDCEA1FBAA57900DABD64 /* NewsDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDao.swift; sourceTree = "<group>"; };
+		CA3DDCEC1FBAA59A00DABD64 /* NewsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsService.swift; sourceTree = "<group>"; };
+		CA3DDCF01FBAA6CE00DABD64 /* NewsWithImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsWithImageTableViewCell.swift; sourceTree = "<group>"; };
+		CA3DDCF21FBAA6E400DABD64 /* NotImageNewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotImageNewsTableViewCell.swift; sourceTree = "<group>"; };
+		CA3DDCF41FBAC09800DABD64 /* NewsWithImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsWithImageViewController.swift; sourceTree = "<group>"; };
+		CA3DDCFA1FBAC62B00DABD64 /* NotImageNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotImageNewsViewController.swift; sourceTree = "<group>"; };
+		CA4BBB801FCDF281001A8DCE /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		CADBFB031FCDF46E0024BAA9 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		CD42F167FE00165C071FC001 /* Pods-Nuntium.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nuntium.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nuntium/Pods-Nuntium.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CA3DDCC91FBAA45000DABD64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C0906F271BD31CF754837FD /* Pods_Nuntium.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		61F38A58FF9766BD875AAB5D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8AFBCFC1FA87054B2B0CC2B7 /* Pods_Nuntium.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7EB466867FCC563DBA5FBA49 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CD42F167FE00165C071FC001 /* Pods-Nuntium.debug.xcconfig */,
+				A418837D8BE30B31A6AC47C9 /* Pods-Nuntium.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CA2088851FBB54050095294F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CA3DDCCF1FBAA45000DABD64 /* AppDelegate.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CA2088861FBB54180095294F /* NewsDao */ = {
+			isa = PBXGroup;
+			children = (
+				CA3DDCEA1FBAA57900DABD64 /* NewsDao.swift */,
+			);
+			path = NewsDao;
+			sourceTree = "<group>";
+		};
+		CA2088871FBB54230095294F /* NewsService */ = {
+			isa = PBXGroup;
+			children = (
+				CA3DDCEC1FBAA59A00DABD64 /* NewsService.swift */,
+			);
+			path = NewsService;
+			sourceTree = "<group>";
+		};
+		CA3DDCC31FBAA45000DABD64 = {
+			isa = PBXGroup;
+			children = (
+				CA3DDCCE1FBAA45000DABD64 /* Nuntium */,
+				CA3DDCCD1FBAA45000DABD64 /* Products */,
+				7EB466867FCC563DBA5FBA49 /* Pods */,
+				61F38A58FF9766BD875AAB5D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CA3DDCCD1FBAA45000DABD64 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CA3DDCCC1FBAA45000DABD64 /* Nuntium.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CA3DDCCE1FBAA45000DABD64 /* Nuntium */ = {
+			isa = PBXGroup;
+			children = (
+				CA2088871FBB54230095294F /* NewsService */,
+				CA2088861FBB54180095294F /* NewsDao */,
+				CA2088851FBB54050095294F /* Main */,
+				CA3DDCF91FBAC5F100DABD64 /* Resources */,
+				CA3DDCF81FBAC5DC00DABD64 /* Models */,
+				CA3DDCF61FBAC5B000DABD64 /* Views */,
+				CA3DDCF71FBAC5C800DABD64 /* View controllers */,
+				CA3DDCDE1FBAA45000DABD64 /* Info.plist */,
+				CA3DDCD61FBAA45000DABD64 /* Nuntium.xcdatamodeld */,
+			);
+			path = Nuntium;
+			sourceTree = "<group>";
+		};
+		CA3DDCF61FBAC5B000DABD64 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CA3DDCD31FBAA45000DABD64 /* Main.storyboard */,
+				CA3DDCF01FBAA6CE00DABD64 /* NewsWithImageTableViewCell.swift */,
+				CA3DDCF21FBAA6E400DABD64 /* NotImageNewsTableViewCell.swift */,
+				082837241FCC681000210D3F /* ItemNewsPreferenceTableViewCell.swift */,
+				CA4BBB801FCDF281001A8DCE /* SettingsTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CA3DDCF71FBAC5C800DABD64 /* View controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CA3DDCF41FBAC09800DABD64 /* NewsWithImageViewController.swift */,
+				CA3DDCE81FBAA51800DABD64 /* MainTableViewController.swift */,
+				CA3DDCFA1FBAC62B00DABD64 /* NotImageNewsViewController.swift */,
+				082837221FCC67DE00210D3F /* SelectionNewsPreferenceTableViewController.swift */,
+				CADBFB031FCDF46E0024BAA9 /* SettingsTableViewController.swift */,
+				CA24734F1FD1071A0093F00E /* QueryViewController.swift */,
+			);
+			path = "View controllers";
+			sourceTree = "<group>";
+		};
+		CA3DDCF81FBAC5DC00DABD64 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CA3DDCE61FBAA4DD00DABD64 /* Source.swift */,
+				CA3DDCE41FBAA4AA00DABD64 /* News.swift */,
+				CA2B50581FD1F817008C67FF /* SettingsCell.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CA3DDCF91FBAC5F100DABD64 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CA3DDCDB1FBAA45000DABD64 /* LaunchScreen.storyboard */,
+				CA3DDCD91FBAA45000DABD64 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CA3DDCCB1FBAA45000DABD64 /* Nuntium */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA3DDCE11FBAA45000DABD64 /* Build configuration list for PBXNativeTarget "Nuntium" */;
+			buildPhases = (
+				63B9DC71C5D4CB167FCC16C0 /* [CP] Check Pods Manifest.lock */,
+				CA3DDCC81FBAA45000DABD64 /* Sources */,
+				CA3DDCC91FBAA45000DABD64 /* Frameworks */,
+				CA3DDCCA1FBAA45000DABD64 /* Resources */,
+				7D48793689AE692F12BD3D6E /* [CP] Embed Pods Frameworks */,
+				A6816DB468CC1257F04E1EC3 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Nuntium;
+			productName = Nuntium;
+			productReference = CA3DDCCC1FBAA45000DABD64 /* Nuntium.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CA3DDCC41FBAA45000DABD64 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Federico Flores";
+				TargetAttributes = {
+					CA3DDCCB1FBAA45000DABD64 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = CA3DDCC71FBAA45000DABD64 /* Build configuration list for PBXProject "Nuntium" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CA3DDCC31FBAA45000DABD64;
+			productRefGroup = CA3DDCCD1FBAA45000DABD64 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CA3DDCCB1FBAA45000DABD64 /* Nuntium */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CA3DDCCA1FBAA45000DABD64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA3DDCDD1FBAA45000DABD64 /* LaunchScreen.storyboard in Resources */,
+				CA3DDCDA1FBAA45000DABD64 /* Assets.xcassets in Resources */,
+				CA3DDCD51FBAA45000DABD64 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		63B9DC71C5D4CB167FCC16C0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nuntium-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D48793689AE692F12BD3D6E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Nuntium/Pods-Nuntium-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nuntium/Pods-Nuntium-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6816DB468CC1257F04E1EC3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nuntium/Pods-Nuntium-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CA3DDCC81FBAA45000DABD64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA3DDCE71FBAA4DD00DABD64 /* Source.swift in Sources */,
+				CA3DDCF51FBAC09800DABD64 /* NewsWithImageViewController.swift in Sources */,
+				CA3DDCE51FBAA4AA00DABD64 /* News.swift in Sources */,
+				CA3DDCD81FBAA45000DABD64 /* Nuntium.xcdatamodeld in Sources */,
+				CA3DDCED1FBAA59A00DABD64 /* NewsService.swift in Sources */,
+				082837231FCC67DE00210D3F /* SelectionNewsPreferenceTableViewController.swift in Sources */,
+				CA3DDCF11FBAA6CE00DABD64 /* NewsWithImageTableViewCell.swift in Sources */,
+				CA2B50591FD1F817008C67FF /* SettingsCell.swift in Sources */,
+				CA3DDCEB1FBAA57900DABD64 /* NewsDao.swift in Sources */,
+				CA4BBB811FCDF281001A8DCE /* SettingsTableViewCell.swift in Sources */,
+				CA2473501FD1071A0093F00E /* QueryViewController.swift in Sources */,
+				CA3DDCFB1FBAC62B00DABD64 /* NotImageNewsViewController.swift in Sources */,
+				CA3DDCE91FBAA51800DABD64 /* MainTableViewController.swift in Sources */,
+				CADBFB041FCDF46E0024BAA9 /* SettingsTableViewController.swift in Sources */,
+				082837251FCC681000210D3F /* ItemNewsPreferenceTableViewCell.swift in Sources */,
+				CA3DDCD01FBAA45000DABD64 /* AppDelegate.swift in Sources */,
+				CA3DDCF31FBAA6E400DABD64 /* NotImageNewsTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CA3DDCD31FBAA45000DABD64 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA3DDCD41FBAA45000DABD64 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CA3DDCDB1FBAA45000DABD64 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA3DDCDC1FBAA45000DABD64 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CA3DDCDF1FBAA45000DABD64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CA3DDCE01FBAA45000DABD64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CA3DDCE21FBAA45000DABD64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD42F167FE00165C071FC001 /* Pods-Nuntium.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F3H86797C5;
+				INFOPLIST_FILE = Nuntium/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = FF.Nuntium;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CA3DDCE31FBAA45000DABD64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A418837D8BE30B31A6AC47C9 /* Pods-Nuntium.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F3H86797C5;
+				INFOPLIST_FILE = Nuntium/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = FF.Nuntium;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CA3DDCC71FBAA45000DABD64 /* Build configuration list for PBXProject "Nuntium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA3DDCDF1FBAA45000DABD64 /* Debug */,
+				CA3DDCE01FBAA45000DABD64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA3DDCE11FBAA45000DABD64 /* Build configuration list for PBXNativeTarget "Nuntium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA3DDCE21FBAA45000DABD64 /* Debug */,
+				CA3DDCE31FBAA45000DABD64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CA3DDCD61FBAA45000DABD64 /* Nuntium.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CA3DDCD71FBAA45000DABD64 /* Nuntium.xcdatamodel */,
+			);
+			currentVersion = CA3DDCD71FBAA45000DABD64 /* Nuntium.xcdatamodel */;
+			path = Nuntium.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CA3DDCC41FBAA45000DABD64 /* Project object */;
+}
