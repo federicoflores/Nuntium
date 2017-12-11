@@ -5,10 +5,11 @@
 //  Created by Federico Flores on 28/11/17.
 //  Copyright © 2017 Federico Flores. All rights reserved.
 //
-
+/*
 import UIKit
 
 class SettingsTableViewController: UITableViewController {
+ 
     
     let userDefaults = UserDefaults()
     
@@ -18,6 +19,8 @@ class SettingsTableViewController: UITableViewController {
     var languageRow : Int?
     var countrySelected : String?
     var countryRow : Int?
+    
+    var fromDateSelected : String?
     
     
     var categoriesDict = ["business" : "business","entertainment" : "entertainment","gaming": "gaming","general": "general", "health-and-medical": "health-and-medical","music": "music","politics": "politics","science-and-nature": "science-and-nature", "sport": "sport","technology": "technology"]
@@ -47,6 +50,13 @@ class SettingsTableViewController: UITableViewController {
         
     }
     
+    /* override func viewWillAppear(_ animated: Bool) {
+        if userDefaults.object(forKey: "categoryElected") != nil || userDefaults.object(forKey: "languageElected") != nil || userDefaults.object(forKey: "countryElected") != nil {
+            performSegue(withIdentifier: "presentNews", sender: nil)
+        }
+    }
+     
+ */
     
 
 
@@ -177,6 +187,8 @@ class SettingsTableViewController: UITableViewController {
             sender.syntetizerLanguage = "en-US"
         }
     }
+    
+    
         
     
 
@@ -226,3 +238,9 @@ class SettingsTableViewController: UITableViewController {
     */
 
 }
+/*
+ selectedCategory = defaults.object(forKey: "categoryElected") as? String ?? ""
+ selectedLanguage = defaults.object(forKey: "languageElected") as? String ?? ""
+ selectedCountry = defaults.object(forKey: "countryElected") as? String ?? ""
+ */
+*/

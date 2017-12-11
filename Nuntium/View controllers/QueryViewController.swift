@@ -8,60 +8,102 @@
 
 import UIKit
 
-class QueryViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+
+class QueryViewController: UIViewController {
     
-    enum Months {
-        case Enero
-        case Febrero
-        case Marzo
-        case Abril
-        case Mayo
-        case Junio
-        case Julio
-        case Agosto
-        case Septiembre
-        case Octube
-        case Noviembre
-        case Diciembre
-    }
+    var selectedFromDate : String = ""
+    var selectedToDate : String = ""
     
-    var days : [Int] = []
-    var months = [Months.Enero, Months.Febrero, Months.Marzo, Months.Abril, Months.Mayo, Months.Junio, Months.Julio, Months.Agosto, Months.Septiembre, Months.Octube, Months.Noviembre, Months.Diciembre]
-    var years : [Int] = []
+    var selectedLanguage : String = ""
     
+    var queryNews : [News] = []
     
     @IBOutlet weak var queryTextField: UITextField!
     
-    @IBOutlet weak var fromDayTextField: UIPickerView!
+    @IBOutlet weak var fromDatePicker: UIDatePicker!
     
-    @IBOutlet weak var fromMonthTextField: UIPickerView!
+    @IBOutlet weak var toDatePicker: UIDatePicker!
     
-    @IBOutlet weak var fromYearTextField: UIPickerView!
+    @IBOutlet weak var searchButtonTapped: UIButton!
     
+    @IBOutlet weak var disselectDateButton: UIButton!
     
+    @IBOutlet weak var selectDateButton: UIButton!
+    
+    @IBOutlet weak var fromLabel: UILabel!
+    
+    @IBOutlet weak var toLabel: UILabel!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
+        
+        let defaults = UserDefaults.standard
+    
+        selectedLanguage = defaults.object(forKey: "languageElected") as? String ?? ""
     }
     
-    func generateDays() {
-        for i in 1...30 {
-            days.append(i)
-        }
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
     }
     
-    func generateYears() {
-        for i in 1900...2017 {
-            years.append(i)
-        }
-        years.sort {
-            $0 > $1
-        }
-    }
 
-  
+    @IBAction func fromDatePickerChanged(_ sender: UIDatePicker) {
+           let dateFormater = DateFormatter()
+        dateFormater.dateFormat = "yyyy-MM-dd"
+        let strDate = dateFormater.string(from: fromDatePicker.date)
+        print(strDate)
+        selectedFromDate = strDate
+        }
+    
+    
+    @IBAction func toDatePickerChanged(_ sender: UIDatePicker) {
+        let dateFormater = DateFormatter()
+        dateFormater.dateFormat = "yyyy-MM-dd"
+        let strDate = dateFormater.string(from: toDatePicker.date)
+        print(strDate)
+        selectedToDate = strDate
+        }
+    
+    
+    @IBAction func doQueryButtonTapped(_ sender: UIButton) {
+        if queryTextField.text != nil {
+            self.performSegue(withIdentifier: "presentQueryTableView", sender: nil)
+            }
+        }
+ 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? MainTableViewController {
+            if let theQuery = queryTextField.text {
+            destination.query = theQuery
+            destination.selectedFromDate = selectedFromDate
+            destination.selectedToDate = selectedToDate
+            destination.infoOrigin = "Query"
+            }
+        }
+    }
+    
+    @IBAction func changeSelectDate(_ sender: UIButton) {
+        fromDatePicker.isHidden = false
+        toDatePicker.isHidden = false
+        searchButtonTapped.isHidden = false
+        toLabel.isHidden = false
+        fromLabel.isHidden = false
+        disselectDateButton.isHidden = false
+        selectDateButton.isHidden = true
+    }
+    
+    @IBAction func changeDisselectDateButton(_ sender: UIButton) {
+        fromDatePicker.isHidden = true
+        toDatePicker.isHidden = true
+        searchButtonTapped.isHidden = true
+        toLabel.isHidden = true
+        fromLabel.isHidden = true
+        selectDateButton.isHidden = false
+        disselectDateButton.isHidden = true
+    }
+    
+    
 
 }

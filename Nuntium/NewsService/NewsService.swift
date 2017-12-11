@@ -17,5 +17,15 @@ class NewsService {
         dao.getNews(source: source, category: category, language: language, country: country, daoCompletion: serviceCompletion)
     }
     
+    func getQuery(q: String, from: String, to: String, language: String, serviceCompletion: @escaping ([News]) -> Void) {
+        let dao = NewsDAO()
+        dao.getQuery(q: q, from: from, to: to, language: language, daoCompletion: serviceCompletion)
+    }
     
+    func getSources(category: String, language: String, country: String, serviceCompletion: @escaping ([Source]) -> Void) {
+        let dao = NewsDAO()
+        dao.getSources(category: category, language: language, country: country, daoCompletion: serviceCompletion)
+    }
+
+
 }

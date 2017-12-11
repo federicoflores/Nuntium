@@ -55,8 +55,17 @@ class NewsWithImageViewController: UIViewController, SFSafariViewControllerDeleg
         reloadData()
         let defaults = UserDefaults.standard
         syntetizerLanguage = defaults.object(forKey: "languageElected") as? String ?? ""
-        
 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let defaults = UserDefaults.standard
+        syntetizerLanguage = defaults.object(forKey: "languageElected") as? String ?? ""
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        synthesizer.stopSpeaking(at: AVSpeechBoundary.word)
     }
     
     
@@ -79,6 +88,7 @@ class NewsWithImageViewController: UIViewController, SFSafariViewControllerDeleg
             }
         } else {
             synthesizer.continueSpeaking()
+            
             }
         }
     
@@ -121,6 +131,8 @@ class NewsWithImageViewController: UIViewController, SFSafariViewControllerDeleg
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
     
     
     func selectSyntetizerLenguage() -> String {

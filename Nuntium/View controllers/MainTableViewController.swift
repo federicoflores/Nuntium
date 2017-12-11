@@ -10,62 +10,134 @@
 import UIKit
 import AVFoundation
 
-
 class MainTableViewController: UITableViewController,  NewsWithImageViewControllerDelegate {
+    
+
+
+    var infoOrigin = ""
     
     var selectedCategory : String = ""
     var selectedLanguage : String = ""
     var selectedCountry : String = ""
+    
+    var query = ""
+    var selectedFromDate : String = ""
+    var selectedToDate : String = ""
+    
+    var sourcesSelected : String = ""
 
     var newsArray: [News] = []
     
+
     var selectedNewsIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.isHidden = true
+        //tableView.isHidden = true
         
-        let defaults = UserDefaults.standard
-        
-        selectedCategory = defaults.object(forKey: "categoryElected") as? String ?? ""
-        selectedLanguage = defaults.object(forKey: "languageElected") as? String ?? ""
-        selectedCountry = defaults.object(forKey: "countryElected") as? String ?? ""
-        
-        let service = NewsService()
-        
-        service.getNews(source: "", category: selectedCategory, language: selectedLanguage, country: selectedCountry, serviceCompletion: {response in
-            self.newsArray = response
-            self.tableView.reloadData()
-            
-            let filteredArray = self.newsArray.filter {$0.source?.name != "ABC News" && $0.source?.name != "Al Jazeera English"}
- 
-            self.newsArray = filteredArray
-            self.tableView.isHidden = false
-        })
-        
-        
-        
+//        let defaults = UserDefaults .standard
+//
+//        selectedLanguage = defaults.object(forKey: "languageElected") as? String ?? ""
+//
+//        let service = NewsService()
+//        if selectedLanguage != "" {
+//        service.getNews(source: "", category: "", language: selectedLanguage, country: "", serviceCompletion: {response in
+//            self.newsArray = response
+//            self.tableView.reloadData()
+//
+//            let filteredArray = self.newsArray.filter {$0.source?.name != "ABC News" && $0.source?.name != "Al Jazeera English"}
+//
+//            self.newsArray = filteredArray
+//            self.tableView.isHidden = false
+//        })
+//        } else {
+//            service.getNews(source: "", category: "", language: "es", country: "", serviceCompletion: {response in
+//                self.newsArray = response
+//                self.tableView.reloadData()
+//
+//                let filteredArray = self.newsArray.filter {$0.source?.name != "ABC News" && $0.source?.name != "Al Jazeera English"}
+//
+//                self.newsArray = filteredArray
+//                self.tableView.isHidden = false
+//            })
+//
+//        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        self.navigationItem.setHidesBackButton(true, animated:true)
+        
         let defaults = UserDefaults.standard
         
-        selectedCategory = defaults.object(forKey: "categoryElected") as? String ?? ""
         selectedLanguage = defaults.object(forKey: "languageElected") as? String ?? ""
-        selectedCountry = defaults.object(forKey: "countryElected") as? String ?? ""
         
+        switch infoOrigin {
+        case "Categories" :
         let service = NewsService()
-        
-        service.getNews(source: "", category: selectedCategory, language: selectedLanguage, country: selectedCountry, serviceCompletion: {response in
+        service.getNews(source: "", category: selectedCategory, language: selectedLanguage, country: "", serviceCompletion: {response in
             self.newsArray = response
             self.tableView.reloadData()
             
-            let filteredArray = self.newsArray.filter {$0.source?.name != "ABC News" && $0.source?.name != "Al Jazeera English"}
+            let filteredArray = self.newsArray.filter {$0.source?.name != "ABC News" && $0.source?.name != "Al Jazeera English" && $0.source?.name != "BBC Sport" && $0.source?.name != "Vice News"}
             
             self.newsArray = filteredArray
-            self.tableView.isHidden = false
+            self.tableView.reloadData()
         })
-        
+        case "Query":
+            let service = NewsService()
+            service.getQuery(q: query, from: selectedFromDate, to: selectedToDate, language: selectedLanguage, serviceCompletion: {response in
+                self.newsArray = response
+                self.tableView.reloadData()
+                let filteredArray = self.newsArray.filter {$0.source?.name != "ABC News" && $0.source?.name != "Al Jazeera English" && $0.source?.name != "BBC Sport" && $0.source?.name != "Vice News"}
+                self.newsArray = filteredArray
+                self.tableView.reloadData()
+            })
+        case "Sources":
+            let service = NewsService()
+            service.getNews(source: sourcesSelected, category: "", language: selectedLanguage, country: "", serviceCompletion: {response in
+                self.newsArray = response
+                self.tableView.reloadData()
+                
+                let filteredArray = self.newsArray.filter {$0.source?.name != "ABC News" && $0.source?.name != "Al Jazeera English" && $0.source?.name != "BBC Sport" && $0.source?.name != "Vice News"}
+                
+                self.newsArray = filteredArray
+                self.tableView.reloadData()
+            })
+            
+        default:
+            
+            
+            let service = NewsService()
+            if selectedLanguage != "" {
+                service.getNews(source: "", category: "", language: selectedLanguage, country: "", serviceCompletion: {response in
+                    self.newsArray = response
+                    self.tableView.reloadData()
+                    
+                    let filteredArray = self.newsArray.filter {$0.source?.name != "ABC News" && $0.source?.name != "Al Jazeera English"}
+                    
+                    self.newsArray = filteredArray
+                    self.tableView.isHidden = false
+                })
+            } else {
+                service.getNews(source: "", category: "", language: "es", country: "", serviceCompletion: {response in
+                    self.newsArray = response
+                    self.tableView.reloadData()
+                    
+                    let filteredArray = self.newsArray.filter {$0.source?.name != "ABC News" && $0.source?.name != "Al Jazeera English"}
+                    
+                    self.newsArray = filteredArray
+                    self.tableView.isHidden = false
+                })
+                
+            }
+            
+            
+            
+            
+        break
+        }
+        tableView.reloadData()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
