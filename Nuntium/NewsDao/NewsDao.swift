@@ -13,9 +13,9 @@ class NewsDAO {
     
     var receivedSources: [Source] = []
     
-    func getNews(source: String, category: String, language: String, country: String, daoCompletion: @escaping ([News]) -> Void) {
+    func getNews(sources: String, category: String, language: String, country: String, daoCompletion: @escaping ([News]) -> Void) {
         
-        let parameters = ["source": source,"category": category, "language": language,"country": country, "apiKey": "473528cc5b7d44fa85b372bb1b8dde72"]
+        let parameters = ["sources": sources,"category": category, "language": language,"country": country, "apiKey": "473528cc5b7d44fa85b372bb1b8dde72"]
         
         Alamofire.request("https://newsapi.org/v2/top-headlines", parameters: parameters, encoding: URLEncoding.default).responseJSON(completionHandler: { response in
             

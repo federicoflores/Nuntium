@@ -75,7 +75,7 @@ class MainTableViewController: UITableViewController,  NewsWithImageViewControll
         switch infoOrigin {
         case "Categories" :
         let service = NewsService()
-        service.getNews(source: "", category: selectedCategory, language: selectedLanguage, country: "", serviceCompletion: {response in
+        service.getNews(sources: "", category: selectedCategory, language: selectedLanguage, country: "", serviceCompletion: {response in
             self.newsArray = response
             self.tableView.reloadData()
             
@@ -95,7 +95,7 @@ class MainTableViewController: UITableViewController,  NewsWithImageViewControll
             })
         case "Sources":
             let service = NewsService()
-            service.getNews(source: sourcesSelected, category: "", language: selectedLanguage, country: "", serviceCompletion: {response in
+            service.getNews(sources: sourcesSelected, category: "", language: selectedLanguage, country: "", serviceCompletion: {response in
                 self.newsArray = response
                 self.tableView.reloadData()
                 
@@ -110,7 +110,7 @@ class MainTableViewController: UITableViewController,  NewsWithImageViewControll
             
             let service = NewsService()
             if selectedLanguage != "" {
-                service.getNews(source: "", category: "", language: selectedLanguage, country: "", serviceCompletion: {response in
+                service.getNews(sources: "", category: "", language: selectedLanguage, country: "", serviceCompletion: {response in
                     self.newsArray = response
                     self.tableView.reloadData()
                     
@@ -120,7 +120,7 @@ class MainTableViewController: UITableViewController,  NewsWithImageViewControll
                     self.tableView.isHidden = false
                 })
             } else {
-                service.getNews(source: "", category: "", language: "es", country: "", serviceCompletion: {response in
+                service.getNews(sources: "", category: "", language: "es", country: "", serviceCompletion: {response in
                     self.newsArray = response
                     self.tableView.reloadData()
                     
@@ -131,9 +131,6 @@ class MainTableViewController: UITableViewController,  NewsWithImageViewControll
                 })
                 
             }
-            
-            
-            
             
         break
         }

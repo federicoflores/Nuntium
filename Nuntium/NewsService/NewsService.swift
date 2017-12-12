@@ -12,9 +12,9 @@ import Foundation
 
 class NewsService {
     
-    func getNews(source: String, category: String, language: String, country: String, serviceCompletion: @escaping ([News]) -> Void) {
+    func getNews(sources: String, category: String, language: String, country: String, serviceCompletion: @escaping ([News]) -> Void) {
         let dao = NewsDAO()
-        dao.getNews(source: source, category: category, language: language, country: country, daoCompletion: serviceCompletion)
+        dao.getNews(sources: sources, category: category, language: language, country: country, daoCompletion: serviceCompletion)
     }
     
     func getQuery(q: String, from: String, to: String, language: String, serviceCompletion: @escaping ([News]) -> Void) {

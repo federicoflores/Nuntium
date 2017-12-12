@@ -131,8 +131,9 @@ class SourcesViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? MainTableViewController {
-            sourcesSelected = sourcesIdSelected.reduce("", +)
-            destination.sourcesSelected = sourcesSelected
+            let joiner = ", "
+            sourcesSelected = sourcesIdSelected.joined(separator: joiner)
+            destination.sourcesSelected = self.sourcesSelected
             destination.infoOrigin = "Sources"
         }
     }
