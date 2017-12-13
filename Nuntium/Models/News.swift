@@ -17,6 +17,18 @@ class News {
     var publishedAt: String
     var source: Source?
     
+    init(from CDNews: CDNews) {
+        author = CDNews.author ?? ""
+        title = CDNews.title ?? ""
+        description = CDNews.descriptionn ?? ""
+        url = CDNews.url ?? ""
+        urlToImage = CDNews.urlToImage ?? ""
+        publishedAt = CDNews.publishedAt ?? ""
+        if let theSource = CDNews.source {
+            source = Source(from: theSource)
+        }
+    }
+    
     init(author: String, title: String, description: String, url: String, urlToImage: String, publishedAt: String, hasImage: Bool, source: String) {
         self.author = author
         self.title = title

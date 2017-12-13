@@ -26,6 +26,21 @@ class NewsService {
         let dao = NewsDAO()
         dao.getSources(category: category, language: language, country: country, daoCompletion: serviceCompletion)
     }
+    
+    func saveNews(news: News) {
+        let newsDao = LocalDao()
+        newsDao.save(news: news)
+    }
+    
+    func getFavorites() -> [News]  {
+        let newsDao = LocalDao()
+        return newsDao.getLocalNews()
+    }
+    
+    func delete(news: News) {
+        let newsDao = LocalDao()
+        newsDao.delete(news: news)
+    }
 
 
 }

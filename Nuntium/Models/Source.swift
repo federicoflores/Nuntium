@@ -17,6 +17,16 @@ class Source {
     var category: String
     var language: String
     var country: String
+    
+    init(from CDSource: CDSource) {
+        id = CDSource.id ?? ""
+        name = CDSource.name ?? ""
+        description = CDSource.descriptionn ?? ""
+        url = CDSource.url ?? ""
+        category = CDSource.category ?? ""
+        language = CDSource.language ?? ""
+        country = CDSource.country ?? ""
+    }
 
     
     init(id: String, name: String, description: String, url: String, category: String, language: String, country: String, urlsToLogos: [String:String], sortBysAvailable: [String]) {

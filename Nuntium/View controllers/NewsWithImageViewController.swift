@@ -156,5 +156,16 @@ class NewsWithImageViewController: UIViewController, SFSafariViewControllerDeleg
             }
   
     }
+    
+    @IBAction func saveFavoriteButtonTapped(_ sender: UIBarButtonItem) {
+        let service = NewsService()
+        if let news = news {
+            service.saveNews(news: news)
+        }
+        
+    }
+
+    
+    
 
 }
