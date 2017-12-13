@@ -37,6 +37,12 @@ class SourcesViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     @IBOutlet weak var sourcesTableView: UITableView!
     
+    @IBOutlet weak var selectCategoryButton: UIButton!
+    
+    @IBOutlet weak var selectCountryButton: UIButton!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         sourcesTableView.allowsMultipleSelection = true
@@ -44,6 +50,8 @@ class SourcesViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         categoriesPickerView.dataSource = self
         countriesPickerView.delegate = self
         countriesPickerView.dataSource = self
+        categoriesPickerView.isHidden = true
+        selectCountryButton.isHidden = true
         
         let service = NewsService()
         service.getSources(category: "", language: "", country: "", serviceCompletion: { response in
@@ -143,6 +151,19 @@ class SourcesViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         sourcesIdSelected = []
     }
     
+    @IBAction func tappedSelectCountryButton(_ sender: UIButton) {
+        countriesPickerView.isHidden = false
+        categoriesPickerView.isHidden = true
+        selectCountryButton.isHidden = true
+        selectCategoryButton.isHidden = false
+    }
+    
+    @IBAction func tappedSelectCategoryButton(_ sender: UIButton) {
+        countriesPickerView.isHidden = true
+        categoriesPickerView.isHidden = false
+        selectCategoryButton.isHidden = true
+        selectCountryButton.isHidden = false
+    }
     
     
 }

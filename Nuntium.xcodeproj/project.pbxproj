@@ -14,6 +14,7 @@
 		CA238A8E1FDDE5F700FE6D46 /* SourcesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA238A8D1FDDE5F700FE6D46 /* SourcesTableViewCell.swift */; };
 		CA238A901FDDE60E00FE6D46 /* SourceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA238A8F1FDDE60E00FE6D46 /* SourceCell.swift */; };
 		CA2473501FD1071A0093F00E /* QueryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA24734F1FD1071A0093F00E /* QueryViewController.swift */; };
+		CA2557F91FE0CCCA00C2CAD0 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2557F81FE0CCCA00C2CAD0 /* CategoryTableViewCell.swift */; };
 		CA2989601FDADCC20063700C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA29895F1FDADCC20063700C /* SettingsViewController.swift */; };
 		CA3DDCD01FBAA45000DABD64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3DDCCF1FBAA45000DABD64 /* AppDelegate.swift */; };
 		CA3DDCD51FBAA45000DABD64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA3DDCD31FBAA45000DABD64 /* Main.storyboard */; };
@@ -29,7 +30,6 @@
 		CA3DDCF31FBAA6E400DABD64 /* NotImageNewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3DDCF21FBAA6E400DABD64 /* NotImageNewsTableViewCell.swift */; };
 		CA3DDCF51FBAC09800DABD64 /* NewsWithImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3DDCF41FBAC09800DABD64 /* NewsWithImageViewController.swift */; };
 		CA3DDCFB1FBAC62B00DABD64 /* NotImageNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3DDCFA1FBAC62B00DABD64 /* NotImageNewsViewController.swift */; };
-		CADBFB041FCDF46E0024BAA9 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADBFB031FCDF46E0024BAA9 /* SettingsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +41,7 @@
 		CA238A8D1FDDE5F700FE6D46 /* SourcesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesTableViewCell.swift; sourceTree = "<group>"; };
 		CA238A8F1FDDE60E00FE6D46 /* SourceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceCell.swift; sourceTree = "<group>"; };
 		CA24734F1FD1071A0093F00E /* QueryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryViewController.swift; sourceTree = "<group>"; };
+		CA2557F81FE0CCCA00C2CAD0 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		CA29895F1FDADCC20063700C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		CA3DDCCC1FBAA45000DABD64 /* Nuntium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nuntium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA3DDCCF1FBAA45000DABD64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,7 +59,6 @@
 		CA3DDCF21FBAA6E400DABD64 /* NotImageNewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotImageNewsTableViewCell.swift; sourceTree = "<group>"; };
 		CA3DDCF41FBAC09800DABD64 /* NewsWithImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsWithImageViewController.swift; sourceTree = "<group>"; };
 		CA3DDCFA1FBAC62B00DABD64 /* NotImageNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotImageNewsViewController.swift; sourceTree = "<group>"; };
-		CADBFB031FCDF46E0024BAA9 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		CD42F167FE00165C071FC001 /* Pods-Nuntium.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nuntium.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nuntium/Pods-Nuntium.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,6 +156,7 @@
 				CA3DDCF01FBAA6CE00DABD64 /* NewsWithImageTableViewCell.swift */,
 				CA3DDCF21FBAA6E400DABD64 /* NotImageNewsTableViewCell.swift */,
 				CA238A8D1FDDE5F700FE6D46 /* SourcesTableViewCell.swift */,
+				CA2557F81FE0CCCA00C2CAD0 /* CategoryTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -167,7 +168,6 @@
 				CA3DDCE81FBAA51800DABD64 /* MainTableViewController.swift */,
 				CA3DDCFA1FBAC62B00DABD64 /* NotImageNewsViewController.swift */,
 				082837221FCC67DE00210D3F /* SelectionNewsPreferenceTableViewController.swift */,
-				CADBFB031FCDF46E0024BAA9 /* SettingsTableViewController.swift */,
 				CA24734F1FD1071A0093F00E /* QueryViewController.swift */,
 				CA29895F1FDADCC20063700C /* SettingsViewController.swift */,
 				CA238A891FDC6ED700FE6D46 /* CategoriesTableViewController.swift */,
@@ -340,8 +340,8 @@
 				CA3DDCFB1FBAC62B00DABD64 /* NotImageNewsViewController.swift in Sources */,
 				CA238A8E1FDDE5F700FE6D46 /* SourcesTableViewCell.swift in Sources */,
 				CA238A8C1FDDCE9400FE6D46 /* SourcesViewController.swift in Sources */,
+				CA2557F91FE0CCCA00C2CAD0 /* CategoryTableViewCell.swift in Sources */,
 				CA3DDCE91FBAA51800DABD64 /* MainTableViewController.swift in Sources */,
-				CADBFB041FCDF46E0024BAA9 /* SettingsTableViewController.swift in Sources */,
 				CA3DDCD01FBAA45000DABD64 /* AppDelegate.swift in Sources */,
 				CA3DDCF31FBAA6E400DABD64 /* NotImageNewsTableViewCell.swift in Sources */,
 				CA2989601FDADCC20063700C /* SettingsViewController.swift in Sources */,

@@ -38,7 +38,10 @@ class CategoriesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "categoryCell", for: indexPath)
-        cell.textLabel?.text = categoriesArray[indexPath.row]
+        if let categoryCell = cell as? CategoryTableViewCell {
+            let categoryName = categoriesArray[indexPath.row]
+            categoryCell.setUp(categoryName: categoryName, categoryImage: categoryName)
+        }
         return cell
     }
     

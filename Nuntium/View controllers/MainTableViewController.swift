@@ -33,35 +33,7 @@ class MainTableViewController: UITableViewController,  NewsWithImageViewControll
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //tableView.isHidden = true
         
-//        let defaults = UserDefaults .standard
-//
-//        selectedLanguage = defaults.object(forKey: "languageElected") as? String ?? ""
-//
-//        let service = NewsService()
-//        if selectedLanguage != "" {
-//        service.getNews(source: "", category: "", language: selectedLanguage, country: "", serviceCompletion: {response in
-//            self.newsArray = response
-//            self.tableView.reloadData()
-//
-//            let filteredArray = self.newsArray.filter {$0.source?.name != "ABC News" && $0.source?.name != "Al Jazeera English"}
-//
-//            self.newsArray = filteredArray
-//            self.tableView.isHidden = false
-//        })
-//        } else {
-//            service.getNews(source: "", category: "", language: "es", country: "", serviceCompletion: {response in
-//                self.newsArray = response
-//                self.tableView.reloadData()
-//
-//                let filteredArray = self.newsArray.filter {$0.source?.name != "ABC News" && $0.source?.name != "Al Jazeera English"}
-//
-//                self.newsArray = filteredArray
-//                self.tableView.isHidden = false
-//            })
-//
-//        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -74,27 +46,32 @@ class MainTableViewController: UITableViewController,  NewsWithImageViewControll
         
         switch infoOrigin {
         case "Categories" :
-        let service = NewsService()
-        service.getNews(sources: "", category: selectedCategory, language: selectedLanguage, country: "", serviceCompletion: {response in
+            let service = NewsService()
+            tableView.isHidden = true
+            service.getNews(sources: "", category: selectedCategory, language: selectedLanguage, country: "", serviceCompletion: {response in
             self.newsArray = response
             self.tableView.reloadData()
             
             let filteredArray = self.newsArray.filter {$0.source?.name != "ABC News" && $0.source?.name != "Al Jazeera English" && $0.source?.name != "BBC Sport" && $0.source?.name != "Vice News"}
             
             self.newsArray = filteredArray
+            self.tableView.isHidden = false
             self.tableView.reloadData()
         })
         case "Query":
             let service = NewsService()
+            tableView.isHidden = true
             service.getQuery(q: query, from: selectedFromDate, to: selectedToDate, language: selectedLanguage, serviceCompletion: {response in
                 self.newsArray = response
                 self.tableView.reloadData()
                 let filteredArray = self.newsArray.filter {$0.source?.name != "ABC News" && $0.source?.name != "Al Jazeera English" && $0.source?.name != "BBC Sport" && $0.source?.name != "Vice News"}
                 self.newsArray = filteredArray
+                self.tableView.isHidden = false
                 self.tableView.reloadData()
             })
         case "Sources":
             let service = NewsService()
+            tableView.isHidden = true
             service.getNews(sources: sourcesSelected, category: "", language: selectedLanguage, country: "", serviceCompletion: {response in
                 self.newsArray = response
                 self.tableView.reloadData()
@@ -102,6 +79,7 @@ class MainTableViewController: UITableViewController,  NewsWithImageViewControll
                 let filteredArray = self.newsArray.filter {$0.source?.name != "ABC News" && $0.source?.name != "Al Jazeera English" && $0.source?.name != "BBC Sport" && $0.source?.name != "Vice News"}
                 
                 self.newsArray = filteredArray
+                self.tableView.isHidden = false
                 self.tableView.reloadData()
             })
             
@@ -109,6 +87,7 @@ class MainTableViewController: UITableViewController,  NewsWithImageViewControll
             
             
             let service = NewsService()
+            tableView.isHidden = true
             if selectedLanguage != "" {
                 service.getNews(sources: "", category: "", language: selectedLanguage, country: "", serviceCompletion: {response in
                     self.newsArray = response
@@ -134,6 +113,7 @@ class MainTableViewController: UITableViewController,  NewsWithImageViewControll
             
         break
         }
+        
         tableView.reloadData()
     }
     
