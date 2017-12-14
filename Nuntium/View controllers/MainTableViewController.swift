@@ -17,7 +17,7 @@ class MainTableViewController: UITableViewController,  NewsWithImageViewControll
     var infoOrigin = ""
     
     var selectedCategory : String = ""
-    var selectedLanguage : String = ""
+    var selectedLanguage : String = "es"
     var selectedCountry : String = ""
     
     var query = ""

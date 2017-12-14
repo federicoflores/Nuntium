@@ -27,6 +27,9 @@ class NewsWithImageViewController: UIViewController, SFSafariViewControllerDeleg
     
     var delegate : NewsWithImageViewControllerDelegate?
     
+    @IBOutlet weak var favoriteButton: UIBarButtonItem!
+    
+    
     @IBOutlet weak var newsImageView: UIImageView!
     
     @IBOutlet weak var titleLabel: UILabel!
@@ -136,24 +139,24 @@ class NewsWithImageViewController: UIViewController, SFSafariViewControllerDeleg
     
     
     func selectSyntetizerLenguage() -> String {
-            switch syntetizerLanguage {
-            case "es":
-                syntetizerLanguage = "es-MX"
-                return syntetizerLanguage
-            case "en":
-                syntetizerLanguage = "en-US"
-                return syntetizerLanguage
-            case "fr":
-                syntetizerLanguage = "fr-FR"
-                return syntetizerLanguage
-            case "it":
-                syntetizerLanguage = "it-IT"
-                return syntetizerLanguage
-            default:
-                syntetizerLanguage = "en-US"
-                return syntetizerLanguage
-                
-            }
+        switch syntetizerLanguage {
+        case "es", "es-MX":
+            syntetizerLanguage = "es-MX"
+            return syntetizerLanguage
+        case "fr", "fr-FR":
+            syntetizerLanguage = "fr-FR"
+            return syntetizerLanguage
+        case "it", "it-IT":
+            syntetizerLanguage = "it-IT"
+            return syntetizerLanguage
+        case "de", "de-DE":
+            syntetizerLanguage = "de-DE"
+            return syntetizerLanguage
+        default:
+            syntetizerLanguage = "en-US"
+            return syntetizerLanguage
+            
+        }
   
     }
     
@@ -161,6 +164,7 @@ class NewsWithImageViewController: UIViewController, SFSafariViewControllerDeleg
         let service = NewsService()
         if let news = news {
             service.saveNews(news: news)
+            favoriteButton.isEnabled = false
         }
         
     }
