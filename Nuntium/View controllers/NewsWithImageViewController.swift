@@ -29,7 +29,6 @@ class NewsWithImageViewController: UIViewController, SFSafariViewControllerDeleg
     
     @IBOutlet weak var favoriteButton: UIBarButtonItem!
     
-    
     @IBOutlet weak var newsImageView: UIImageView!
     
     @IBOutlet weak var titleLabel: UILabel!
@@ -56,9 +55,22 @@ class NewsWithImageViewController: UIViewController, SFSafariViewControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         reloadData()
+        let service = NewsService()
+        var savedNews = service.getFavorites()
+        if let news = news {
+            if savedNews.contains(news) {
+                favoriteButton.isEnabled = false
+            }
+            
+        }
+        
+        
+        
+        
+        
         let defaults = UserDefaults.standard
         syntetizerLanguage = defaults.object(forKey: "languageElected") as? String ?? ""
-
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

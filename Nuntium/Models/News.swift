@@ -8,7 +8,7 @@
 
 import Foundation
 
-class News {
+class News : Equatable {
     var author: String
     var title: String
     var description: String
@@ -51,6 +51,13 @@ class News {
             self.source = sourceValue
         }
     }
+    
+    static func == (lhs: News, rhs: News) -> Bool {
+        return
+            lhs.title == rhs.title && lhs.description == rhs.description
+    }
+    
+    
 }
 
 
